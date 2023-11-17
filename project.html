@@ -9,6 +9,8 @@
 f90068558c.js"
       crossorigin="anonymous"
     ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <header>
@@ -32,7 +34,13 @@ f90068558c.js"
         <h1>My Project Details</h1>
       </div>
       <div class="all-projects">
-        <article id="scratch-project">
+        <article
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          id="scratch-project"
+        >
           <div class="project-detail">
             <div class="project-img">
               <img src="./assets/hanako with a cat.jpg" alt="Scratch" />
@@ -58,7 +66,45 @@ f90068558c.js"
           </div>
         </article>
 
-        <article id="scratch-project">
+        <article
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          id="scratch-project"
+        >
+          <div class="project-detail">
+            <div class="project-img">
+              <img src="./assets/hanako with a cat.jpg" alt="Scratch" />
+            </div>
+
+            <div class="project-description">
+              <h3>Scratch Project</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Explicabo suscipit, nulla ad maiores expedita corporis
+                voluptatum quasi? Illum, quae eius? Rem modi velit in incidunt!
+                Nesciunt voluptates nobis nisi asperiores!
+              </p>
+
+              <p class="project-link">
+                Here is the link to preview the project
+                <a href="">Game Scartch</a>
+              </p>
+            </div>
+            <div class="rocket-container">
+              <img src="./assets/yipee.jpg" alt="rocket" />
+            </div>
+          </div>
+        </article>
+
+        <article
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+          id="scratch-project"
+        >
           <div class="project-detail">
             <div class="project-img">
               <img src="./assets/hanako with a cat.jpg" alt="Scratch" />
@@ -102,4 +148,7 @@ f90068558c.js"
     </footer>
   </body>
   <script src="main.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

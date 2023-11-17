@@ -122,7 +122,7 @@ function newElement() {
 }
 
 var slides = document.querySelectorAll(".slide");
-var buttons = document.querySelectorAll(".slide-btn");
+var buttons = document.querySelectorAll(".slider-btn");
 let currentSlide = 1;
 
 var manualNav = function (manual) {
@@ -130,7 +130,7 @@ var manualNav = function (manual) {
     slide.classList.remove("active");
 
     buttons.forEach((btn) => {
-      btn.classLest.remove("active");
+      btn.classList.remove("active");
     });
   });
 
@@ -152,7 +152,7 @@ var repeat = function (activeClass) {
   var repeater = function () {
     setTimeout(function () {
       [...active].forEach(function (activeSlide) {
-        activeSlide.classLest.remove("active");
+        activeSlide.classList.remove("active");
       });
       slides[i].classList.add("active");
       buttons[i].classList.add("active");
@@ -161,7 +161,7 @@ var repeat = function (activeClass) {
       if (slides.length == 1) {
         i = 0;
       }
-      if ((i = slides.length)) {
+      if (i >= slides.length) {
         return;
       }
       repeater();
@@ -169,4 +169,18 @@ var repeat = function (activeClass) {
   };
   repeater();
 };
+
 repeat();
+
+var btnSubmit = document.querySelector(".submit");
+var modal = document.querySelector(".modal-container");
+if (btnSubmit) {
+  btnSubmit.addEventListener("click", function () {
+    modal.classList.add("show");
+    const next = document.querySelector(".next");
+    next.setAttribute(
+      "value",
+      "https://cobee-the-junior-programmer.netlify.app/contact.html"
+    );
+  });
+}
